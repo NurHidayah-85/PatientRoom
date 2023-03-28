@@ -50,6 +50,19 @@ public static void main (String[] args)
         System.out.println(p[i]);//display the details information of  patient and room.
 
         }
+    
+        // B ii)
+        int patientCount = 0;
+        for (int i=0; i<p.length; i++) {
+            // Convert patient to Room object
+            Room room = (Room)p[i];
+
+            if (room.getNoDay() > 20) {
+                patientCount++;
+            }
+        }
+
+        System.out.println(patientCount + " have stayed for more than 20 days.");
        //  for (int i=0; i<p.length; i++) {
        //     if (p.getoDay => 20) {
        //         System.out.println(p[i]);
