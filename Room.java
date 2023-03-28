@@ -37,7 +37,7 @@ public class Room extends Patient{
     }
     
     
-    
+   //calculate payment according to typeRoom and noDay 
     public double calcPayment()
     {
         double pay = 0;
@@ -84,6 +84,9 @@ public class Room extends Patient{
     }
     
     
+
+
+    //calculate average payment perday for each patient
     
     public double average(){
         
