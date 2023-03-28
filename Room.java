@@ -83,11 +83,23 @@ public class Room extends Patient{
    
     }
     
+    
+    
+    public double average(){
+        
+        double avg = calcPayment() / noDay;
+        
+        return avg;
+    }
+    
+    
+    
+    
     @Override
     public String toString() 
 {
    
-   return super.toString() + " , Type: " + typeRoom +  " , Day(s): " + noDay + " , Payment (RM): " + calcPayment();
+   return super.toString() + " , Type: " + typeRoom +  " , Day(s): " + noDay + " , Payment (RM): " + calcPayment() + " , Average payment per day (RM): "+ average();
 }
     
     
