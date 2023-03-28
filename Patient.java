@@ -49,7 +49,7 @@ public class Patient {
 public String toString() 
 {
    
-return patientName + ", " + patientNumber + " ," + patientAddress;
+return "Name : " + patientName + ", Patient Number " + patientNumber + " , Address: " + patientAddress;
 }
    
 }

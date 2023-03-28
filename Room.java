@@ -38,43 +38,57 @@ public class Room extends Patient{
     
     
     
-    public void calcPayment()
+    public double calcPayment()
     {
-        double pay;
+        double pay = 0;
         if (noDay > 20)
         {
-            if (typeRoom.equals("Diamond"))
-                pay = noDay * 200 * 0.25;
-            else if (typeRoom.equals("Gold"))
-                pay = noDay * 100 * 0.25;
-            else if (typeRoom.equals("Silver"))
-                pay = noDay * 80 * 0.25;
-            else if (typeRoom.equals("Bronze"))
-                pay = noDay * 50 * 0.25;
+            switch (typeRoom) {
+                case "Diamond":
+                    pay = noDay * 200 * 0.25;
+                    break;
+                case "Gold":
+                    pay = noDay * 100 * 0.25;
+                    break;
+                case "Silver":
+                    pay = noDay * 80 * 0.25;
+                    break;
+                case "Bronze":
+                    pay = noDay * 50 * 0.25;
+                    break;
+                default:
+                    break;
+            }
             
         }
-        else if (noDay < 20) {
-            if (typeRoom.equals("Diamond"))
-                pay = noDay * 200;
-            else if (typeRoom.equals("Gold"))
-                pay = noDay * 100;
-            else if (typeRoom.equals("Silver"))
-                pay = noDay * 80;
-            else if (typeRoom.equals("Bronze"))
-                pay = noDay * 50;
+        else if (noDay <= 20) {
+            switch (typeRoom) {
+                case "Diamond":
+                    pay = noDay * 200;
+                    break;
+                case "Gold":
+                    pay = noDay * 100;
+                    break;
+                case "Silver":
+                    pay = noDay * 80;
+                    break;
+                case "Bronze":
+                    pay = noDay * 50;
+                    break;
+                default:
+                    break;
+            }
         }
-        else return;
+        return pay;
    
     }
     
     @Override
     public String toString() 
-    {
+{
    
-   return patientName + ", " + patientNumber + " ," + patientAddress + typeRoom + noDay;
-    }
-    
-    
+   return super.toString() + " , Type: " + typeRoom +  " , Day(s): " + noDay + " , Payment (RM): " + calcPayment();
+}
     
     
 }

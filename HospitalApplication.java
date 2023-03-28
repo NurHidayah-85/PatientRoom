@@ -50,13 +50,13 @@ public static void main (String[] args)
         System.out.println(p[i]);//display the details information of  patient and room.
 
         }
-         for (int i=0; i<p.length; i++) {
-            if (noDay => 20) {  //how to use back the arraylist???
-                System.out.println(p[i]);
-            } else {
-                System.out.println("");
-            }
-        }
+       //  for (int i=0; i<p.length; i++) {
+       //     if (p.getoDay => 20) {
+       //         System.out.println(p[i]);
+       //     } else {
+       //         System.out.println("");
+        //    }
+        //}
          
          
     }
