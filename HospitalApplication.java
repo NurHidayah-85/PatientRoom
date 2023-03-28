@@ -51,7 +51,7 @@ public static void main (String[] args)
 
         }
          for (int i=0; i<p.length; i++) {
-            if (Room.noDay => 20) {
+            if (noDay => 20) {  //how to use back the arraylist???
                 System.out.println(p[i]);
             } else {
                 System.out.println("");
